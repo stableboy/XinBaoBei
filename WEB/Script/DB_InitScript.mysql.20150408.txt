@@ -1,0 +1,184 @@
+
+
+
+-- 1.	创建数据库
+create DataBase Baby default character set 'utf8' -- if not exists  Baby
+;
+
+use Baby
+;
+
+/*
+
+drop table if exists T_Position
+;
+drop table if exists T_Menu
+;
+drop table if exists T_Question
+;
+drop table if exists T_Solution
+;
+drop table if exists T_User
+;
+drop table if exists S_MaxId
+;
+drop table if exists T_ImportData
+;
+drop table if exists T_AgeGroup
+;
+*/
+
+-- 2.	建表
+-- 2.1	人员表
+	create table if not exists T_Position (
+
+	ID bigint not null AUTO_INCREMENT,
+	Code varchar(100) ,
+	Name varchar(100) ,
+	Type varchar(100) ,
+	Sex varchar(100) ,
+	Level varchar(100) ,
+	Address varchar(100) ,
+	Photo BLOB  ,
+	CreateDate datetime ,
+	State bit ,
+	Intro varchar(4000) ,
+	Memo varchar(100) ,
+	primary key (ID) 
+	)
+;
+-- 2.2	目录表
+	create table if not exists T_Menu (
+
+	ID bigint not null AUTO_INCREMENT,
+	Sequence varchar(100) ,
+	Code varchar(100) ,
+	Name varchar(100) ,
+	Level smallint ,
+	UpLevel varchar(100) ,
+	Path varchar(100) ,
+	IfSee bit ,
+	Memo varchar(100) ,
+	ParentMenu bigint ,
+	AgeGroup bigint ,
+	AgeGroupName varchar(100) ,
+	primary key (ID) 
+	)
+;
+
+
+-- 2.3	问题表
+	create table if not exists T_Question (
+
+	ID bigint not null AUTO_INCREMENT,
+	Sequence varchar(100) ,
+	Code varchar(100) ,
+	AboutAge varchar(100) ,
+	Title varchar(100) ,
+	KeyWords varchar(100) ,
+	Questioner varchar(100) ,
+	TheDate varchar(100) ,
+	Memo varchar(100) ,
+	AgeGroup bigint ,
+	AgeGroupName varchar(100) ,
+	ParentMenu bigint ,
+	ParentMenuName varchar(100) ,
+	Description varchar(4000) ,
+	primary key (ID) 
+	)
+;
+
+-- 2.4	答案表
+	create table if not exists T_Solution (
+
+	ID bigint not null AUTO_INCREMENT,
+	Sequence varchar(100) ,
+	AnCode varchar(100) ,
+	QuCode varchar(100) ,
+	Intro varchar(100) ,
+	Answer varchar(100) ,
+	TheDate varchar(100) ,
+	Memo varchar(100) ,
+	SText varchar(4000) ,
+	Content1 varchar(4000) ,
+	Content2 varchar(4000) ,
+	Content3 varchar(4000) ,
+	Content4 varchar(4000) ,
+	Question bigint ,
+	primary key (ID) 
+	)
+
+;
+
+-- 2.5	用户表
+	create table if not exists T_User (
+
+	ID bigint not null AUTO_INCREMENT,
+	Code varchar(100) ,
+	Name varchar(100) ,
+	PassWord varchar(100) ,
+	Type varchar(100) ,
+	Power varchar(100) ,
+	IfUse bit ,
+	Photo BLOB ,
+	Memo varchar(100) ,
+	primary key (ID) 
+	)
+
+;
+
+-- 2.6	生成问题单号的表
+	create table if not exists S_MaxId (	
+	KeyID int NOT NULL AUTO_INCREMENT,
+	Released tinyint NULL default 1,
+	Entertime TIMESTAMP NOT NULL default CURRENT_TIMESTAMP,
+	MaxId varchar(50) NULL,
+	PRIMARY KEY (KeyID)
+	)
+		
+;
+-- 2.7	数据导入原始表
+	create table if not exists T_ImportData (
+
+	GUID varchar(100) ,
+	Sequence varchar(100) ,
+	Content varchar(4000) ,
+	AgeGroupName varchar(100) ,
+	CreatedBy varchar(100) ,
+	CreatedOn datetime ,
+	DescFlexField1 varchar(100) ,
+	DescFlexField2 varchar(100) ,
+	DescFlexField3 varchar(100) ,
+	DescFlexField4 varchar(100) ,
+	DescFlexField5 varchar(100) ,
+	KeyWords varchar(100) 
+	)
+
+;
+
+-- 2.8	年龄段表
+	create table if not exists T_AgeGroup (
+
+	ID bigint not null AUTO_INCREMENT,
+	Code varchar(100) ,
+	Name varchar(100) ,
+	Memo varchar(100),
+	Sequence varchar(100),
+	AgeBegin int,
+	AgeEnd int,
+	MonthBegin int,
+	MonthEnd int ,
+	PRIMARY KEY (ID)
+	)
+;
+
+	insert into T_User (
+		Code,Name,Type,PassWord,Power
+	)
+	select
+		-- 其中密码是密文的
+		'Admin','Admin','管理','E10ADC3949BA59ABBE56E057F20F883E',3
+	from dual
+	where not exists(select 1 from T_User where Code = 'Admin')
+
+;

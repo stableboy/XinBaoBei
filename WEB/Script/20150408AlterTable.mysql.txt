@@ -1,0 +1,12 @@
+﻿
+
+-- 年龄段表,增加开始、结束时间
+alter table t_agegroup
+add AgeBegin int ;
+alter table t_agegroup
+add AgeEnd int ;
+alter table t_agegroup
+add MonthBegin int ;
+alter table t_agegroup
+add MonthEnd int ;
+

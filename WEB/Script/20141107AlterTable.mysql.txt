@@ -1,0 +1,46 @@
+
+
+-- 目录表
+ALTER TABLE T_Menu add Sequence varchar(100) NULL  COMMENT '序号'
+;
+
+-- 问题表
+ALTER TABLE T_Question add Sequence varchar(100) NULL  COMMENT '序号'
+;
+
+-- 答案表
+ALTER TABLE T_Solution add Sequence varchar(100) NULL  COMMENT '序号'
+;
+
+--人员表
+ALTER TABLE T_Position CHANGE Intro Intro varchar(4000) NULL  COMMENT '人员简介'
+;
+
+-- 2.7	数据导入原始表
+	create table if not exists T_ImportData (
+
+	GUID varchar(100) ,
+	Sequence varchar(100) ,
+	Content varchar(4000) ,
+	AgeGroupName varchar(100) ,
+	CreatedBy varchar(100) ,
+	CreatedOn datetime ,
+	DescFlexField1 varchar(100) ,
+	DescFlexField2 varchar(100) ,
+	DescFlexField3 varchar(100) ,
+	DescFlexField4 varchar(100) ,
+	DescFlexField5 varchar(100) 
+	)
+
+;
+
+-- 2.8	年龄段表
+	create table if not exists T_AgeGroup (
+
+	ID bigint not null AUTO_INCREMENT,
+	Code varchar(100) ,
+	Name varchar(100) ,
+	Memo varchar(100),
+	PRIMARY KEY (ID)
+	)
+;

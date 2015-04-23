@@ -1,0 +1,21 @@
+
+
+-- 问题表
+ALTER TABLE T_Question CHANGE Text Title varchar(100) NULL  COMMENT '问题标题'
+;
+ALTER TABLE T_Question add Description varchar(4000) NULL  COMMENT '问题描述'
+;
+
+-- 答案表
+ALTER TABLE T_Solution CHANGE SText SText varchar(4000) NULL  COMMENT '答案'
+;
+ALTER TABLE T_Solution CHANGE Text Intro varchar(100) NULL  COMMENT '答案简介'
+;
+ALTER TABLE T_Solution add Content1 varchar(4000) NULL  COMMENT '答案内容1'
+;
+ALTER TABLE T_Solution add Content2 varchar(4000) NULL  COMMENT '答案内容2'
+;
+ALTER TABLE T_Solution add Content3 varchar(4000) NULL  COMMENT '答案内容3'
+;
+ALTER TABLE T_Solution add Content4 varchar(4000) NULL  COMMENT '答案内容4'
+;

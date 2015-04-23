@@ -1,0 +1,35 @@
+<a href="/question/25150363/answer/31136648" class="toggle-expand">显示全部</a>
+
+
+
+
+
+
+1、
+
+元素 {
+}
+a.toggle-expand {
+    display: inline-block;
+    padding: 0px 3px;
+    border-radius: 2px;
+    font-size: 0.9em;
+}
+div[contentEditable], input, textarea, button, a:link {
+}
+a {
+    color: #259;
+    text-decoration: none;
+}
+.zh-summary {
+    cursor: pointer;
+}
+html body, html input, html textarea, html select, html button {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+body, input, textarea, select, button {
+    line-height: 1.7;
+    font-size: 13px;
+    color: #222;
+    word-wrap: break-word;
+}

@@ -1,0 +1,10 @@
+
+
+-- 导入表
+ALTER TABLE T_ImportData add KeyWords varchar(100) NULL  COMMENT '关键字'
+;
+
+-- 年龄段表
+ALTER TABLE T_AgeGroup add Sequence varchar(100) NULL  COMMENT '序号'
+;
+

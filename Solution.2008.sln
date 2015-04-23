@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WEB", "WEB\", "{811BEC2C-5E04-4EB5-AAC8-95E51512B237}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = ""
+		Debug.AspNetCompiler.VirtualPath = "/WEB"
+		Debug.AspNetCompiler.PhysicalPath = "WEB\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WEB\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WEB"
+		Release.AspNetCompiler.PhysicalPath = "WEB\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WEB\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4847"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AspNetPager745Demo", "Reference\AspNetPager745Demo\", "{885418ED-A823-4E1E-B308-79B6DFE75B78}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/AspNetPager745Demo"
+		Debug.AspNetCompiler.PhysicalPath = "Reference\AspNetPager745Demo\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AspNetPager745Demo\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/AspNetPager745Demo"
+		Release.AspNetCompiler.PhysicalPath = "Reference\AspNetPager745Demo\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AspNetPager745Demo\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3845"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetPager_CN", "Reference\Wuqi.Webdiyer.AspNetPager\AspNetPager_CN.csproj", "{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{811BEC2C-5E04-4EB5-AAC8-95E51512B237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{811BEC2C-5E04-4EB5-AAC8-95E51512B237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{811BEC2C-5E04-4EB5-AAC8-95E51512B237}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{811BEC2C-5E04-4EB5-AAC8-95E51512B237}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{885418ED-A823-4E1E-B308-79B6DFE75B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{885418ED-A823-4E1E-B308-79B6DFE75B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{885418ED-A823-4E1E-B308-79B6DFE75B78}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{885418ED-A823-4E1E-B308-79B6DFE75B78}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FAC7937-3CDD-41F6-9DC8-C743C9F727F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
