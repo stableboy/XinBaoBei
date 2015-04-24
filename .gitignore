@@ -5,3 +5,6 @@
 Test/*
 # Ignore нд╪Ч
 Ignore*
+
+# .rar
+*.rar
