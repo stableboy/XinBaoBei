@@ -11,8 +11,13 @@ Ignore*
 *.zip
 
 # reference folder
-Reference\Wuqi.Webdiyer.AspNetPager\*
-Reference\AspNetPager745DLL\*
-Reference\AspNetPager745Demo\*
+Reference/Wuqi.Webdiyer.AspNetPager/*
+Reference/AspNetPager745DLL/*
+Reference/AspNetPager745Demo/*
+Solution/Reference/Wuqi.Webdiyer.AspNetPager/*
+Solution/Reference/AspNetPager745DLL/*
+Solution/Reference/AspNetPager745Demo/*
 
 
+# vsµÄuserÎÄ¼þ
+*.suo
