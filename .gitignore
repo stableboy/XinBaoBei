@@ -6,5 +6,13 @@ Test/*
 # Ignore нд╪Ч
 Ignore*
 
-# .rar
+# zip file
 *.rar
+*.zip
+
+# reference folder
+Reference\Wuqi.Webdiyer.AspNetPager\*
+Reference\AspNetPager745DLL\*
+Reference\AspNetPager745Demo\*
+
+
